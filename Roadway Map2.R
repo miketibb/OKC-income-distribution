@@ -12,13 +12,13 @@ gpclibPermit()
 
 # Use your census API key (You'll need to get your own API key)
 #http://api.census.gov/data/key_signup.html
-api.key.install(key="c369cd6ed053a84332caa62301eb8afe98bed825")
+api.key.install(key=" ")
 
 # Load in Shape File (You'll need to download this file from the census)
 #ftp://ftp2.census.gov/geo/tiger/TIGER2013/TRACT/tl_2013_40_tract.zip
 
 ## load, subset shapefile
-geodat<-readShapePoly("C:/Users/Michael/Documents/Economic Research Institute/Census Map/tl_2013_40_tract/tl_2013_40_tract.shp", proj4string=CRS('+proj=longlat +datum=NAD83'))
+geodat<-readShapePoly(" ", proj4string=CRS('+proj=longlat +datum=NAD83'))
 geodat<-geodat[geodat$COUNTYFP==109,]
 
 ## fortify for ggplot digestion
